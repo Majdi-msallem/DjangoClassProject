@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</head>
+<body>
+            {% if user.is_authenticated %}
+                 <p>Welcome , {{user.username}}</p>
+                {% else %}}  <p> please login</p>
+            {% endif %}
+<img src="{% static 'images/logo.jpg' %}">
+
+{% block header %}
+    {% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Page d'accueil</h1>
+{% endblock %}
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="fixed-bottom">
+    <footer id="footer" class="footer row-fluid">
+        {% block footer_content %}
+        <div>
+            Copyright {% now 'y' %} -Esprit -TWIN6
+        </div>
+        {% endblock %}
+    </footer>
+</div>
+
+
+</body>
+</html>

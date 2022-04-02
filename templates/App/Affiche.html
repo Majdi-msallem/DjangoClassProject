@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   Bonjour <i> 4 TWIN 6</i>
+<table>
+    <tr>
+        <th>Nom projet</th>
+        <th>description </th>
+        <th>etat</th>
+        <th>delete</th>
+        <th>deletgeneric</th>
+    </tr>
+    {% for p in pp %}
+     <tr>
+         <td>{{p.nom_projet}}</td>
+         <td>{{p.description}}</td>
+         <td>{{p.est_valide}}</td>
+       <td><a href="{% url 'delete' p.id %}"> Delete</a>
+         <td><a href="{% url 'DD' p.id %}"> DeleteGeneric</a></td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+</body>
+</html>

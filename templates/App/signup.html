@@ -1,0 +1,9 @@
+
+    {% block content %}
+        <form action="" methode="post"> {% csrf_token %}
+
+        {{f.as_p}}
+            <input type="submit" name="register" value="register">
+
+    </form>
+    {% endblock %}
